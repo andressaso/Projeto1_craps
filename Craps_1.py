@@ -287,7 +287,7 @@ print("----------------------")
 print("OBRIGADO POR JOGAR")       
 print("Feito por:") 
 print("- Maria Eduarda Torres")
-print("- Andressa")
+print("- Andressa Silva de Oliveira")
 print("----------------------")
 print("")
     
