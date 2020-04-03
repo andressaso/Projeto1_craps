@@ -60,47 +60,100 @@ while fichas > 0:
             print('Você tem {0} fichas agora.'.format(fichas))
     
         if soma_dados in [4,5,6,8,9,10]:
+            print("")
+            print('Você está na fase Point e para ganhar você deverá tirar o mesmo valor que tirou na soma dos dados da jogada anterior.')
+            print("A soma dos seus dados foi {0}.".format(soma_dados))
+    
+            while True:
+                dado_um_P=random.randint(1,6)
+                dado_dois_P=random.randint(1,6)
+                soma_dados_P = (dado_um_P + dado_dois_P)
+    
+                if soma_dados == soma_dados_P:
+                    fichas += aposta
+    
+                    print("")
+                    print("Você ganhou de volta as suas fichas que foram apostados, a soma dos seus dados foi {0}.".format(soma_dados))
+                    print('Você tem {0} fichas agora.'.format(fichas))
+                    break
+    
+                if soma_dados_P == 7:
+                    fichas += 0
+    
+                    print("")
+                    print('Você perdeu, a soma dos seus dados jogados pela 2° vez foi 7.')
+                    print('Você tem {0} fichas agora.'.format(fichas))
+                    break
+    
+                else:
+                    print("")
+                    print("Você continuará na fase Point, não ganhou nem perdeu fichas e os dados serão lançados novamente.")
+                    print("A soma dos seus dados jogados pela 2° vez foi {0}.".format(soma_dados_P))
+                    print("Pressione 'ENTER' para joagr o dado de novo.")
+                    enter=input("Jogar dados novamente: ")
+    
+        print("")
+        print('A rodada acabou.')
+        print("- Caso queira continuar apostando digite 'sim'.")
+        print("- Caso queira parar de apostar digite 'não'.")
+        ficar_ou_nao=input("Opção: ")
+        if ficar_ou_nao=="NÃO" or ficar_ou_nao=="NAO" or ficar_ou_nao=="Não" or ficar_ou_nao=="Nao" or ficar_ou_nao=="N" or ficar_ou_nao=="não" or ficar_ou_nao=="nao" or ficar_ou_nao=="n":
+            break
+        if ficar_ou_nao=="SIM" or ficar_ou_nao=="Sim" or ficar_ou_nao=="S" or ficar_ou_nao=="sim" or ficar_ou_nao=="s":
+            print()     
+            
+        
+
+#----------------------------------------------------------------------#
+# - Modo 'Field':
+
+    if qual_aposta == 'Field' or qual_aposta == 'field' or qual_aposta == 'FIELD':
+        dado_um=random.randint(1,6)
+        dado_dois=random.randint(1,6)
+        soma_dados = (dado_um + dado_dois)
+
+        aposta=int(input('Quantas fichas você vai querer apostar? '))
+        while aposta > fichas:
+            print("Inválido")
+            aposta=int(input('Digite novamente: '))
+
+        fichas-=aposta
+
+        if soma_dados == 2:
+            fichas += aposta*2
+
+            print("")
+            print('Você ganhou, a soma dos seus dados foi {0}.'.format(soma_dados))
+            print('Você tem {0} fichas agora.'.format(fichas))
+
+        if soma_dados == 12:
+            fichas += aposta*3
+
+            print("")
+            print('Você ganhou, a soma dos seus dados foi {0}.'.format(soma_dados))
+            print('Você tem {0} fichas agora.'.format(fichas))
+
+        if soma_dados in [5,6,7,8]:
+            fichas += 0
+
+            print("")
+            print('Você perdeu, a soma dos seus dados foi {0}.'.format(soma_dados))
+            print('Você tem {0} fichas agora.'.format(fichas))
+
+        if soma_dados in [3,4,9,10,11]:
+            fichas += aposta
+
+            print("")
+            print("Você ganhou de volta as suas fichas que foram apostados, a soma dos seus dados foi {0}.".format(soma_dados))
+            print('Você tem {0} fichas agora.'.format(fichas))
 
         print("")
-        print('Você está na fase Point e para ganhar você deverá tirar o mesmo valor que tirou na soma dos dados da jogada anterior.')
-        print("A soma dos seus dados foi {0}.".format(soma_dados))
-
-        while True:
-            dado_um_P=random.randint(1,6)
-            dado_dois_P=random.randint(1,6)
-            soma_dados_P = (dado_um_P + dado_dois_P)
-
-            if soma_dados == soma_dados_P:
-                fichas += aposta
-
-                print("")
-                print("Você ganhou de volta as suas fichas que foram apostados, a soma dos seus dados foi {0}.".format(soma_dados))
-                print('Você tem {0} fichas agora.'.format(fichas))
-                break
-
-            if soma_dados_P == 7:
-                fichas += 0
-
-                print("")
-                print('Você perdeu, a soma dos seus dados jogados pela 2° vez foi 7.')
-                print('Você tem {0} fichas agora.'.format(fichas))
-                break
-
-            else:
-                print("")
-                print("Você continuará na fase Point, não ganhou nem perdeu fichas e os dados serão lançados novamente.")
-                print("A soma dos seus dados jogados pela 2° vez foi {0}.".format(soma_dados_P))
-                print("Pressione 'ENTER' para joagr o dado de novo.")
-                enter=input("Jogar dados novamente: ")
-
-    print("")
-    print('A rodada acabou.')
-    print("- Caso queira continuar apostando digite 'sim'.")
-    print("- Caso queira parar de apostar digite 'não'.")
-    ficar_ou_nao=input("Opção: ")
-    if ficar_ou_nao=="NÃO" or ficar_ou_nao=="NAO" or ficar_ou_nao=="Não" or ficar_ou_nao=="Nao" or ficar_ou_nao=="N" or ficar_ou_nao=="não" or ficar_ou_nao=="nao" or ficar_ou_nao=="n":
-        break
-    if ficar_ou_nao=="SIM" or ficar_ou_nao=="Sim" or ficar_ou_nao=="S" or ficar_ou_nao=="sim" or ficar_ou_nao=="s":
-        print()         
-
+        print('A rodada acabou.')
+        print("- Caso queira continuar apostando digite 'sim'.")
+        print("- Caso queira parar de apostar digite 'não'.")
+        ficar_ou_nao=input("Opção: ")
+        if ficar_ou_nao=="NÃO" or ficar_ou_nao=="NAO" or ficar_ou_nao=="Não" or ficar_ou_nao=="Nao" or ficar_ou_nao=="N" or ficar_ou_nao=="não" or ficar_ou_nao=="nao" or ficar_ou_nao=="n":
+            break
+        if ficar_ou_nao=="SIM" or ficar_ou_nao=="Sim" or ficar_ou_nao=="S" or ficar_ou_nao=="sim" or ficar_ou_nao=="s":
+            print()
 
