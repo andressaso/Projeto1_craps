@@ -62,7 +62,7 @@ while fichas > 0:
         if soma_dados in [4,5,6,8,9,10]:
             print("")
             print('Você está na fase Point e para ganhar você deverá tirar o mesmo valor que tirou na soma dos dados da jogada anterior.')
-            print("A soma dos seus dados foi {0}.".format(soma_dados))
+            print("A soma dos seus dados na jogada anterior foi {0}.".format(soma_dados))
     
             while True:
                 dado_um_P=random.randint(1,6)
