@@ -11,7 +11,7 @@ fichas=1000
 
 print("")
 print("Bem vindo, {0} ao jogo Craps!".format(nome))
-print("bjcnjnndkjnkjsndkjdkjsdjksbd")
+print("Boa sorte! :)")
 
 #----------------------------------------------------------------------#
 # - Loop Principal:
@@ -19,7 +19,7 @@ print("bjcnjnndkjnkjsndkjdkjsdjksbd")
 while fichas > 0:
     print("")
     print("------------------------------")
-    print("Você esta na 1° fase: Come Out")
+    print("Você esta na fase inicial: Come Out")
     print("Você tem {0} fichas.".format(fichas))
     print("")
 
@@ -177,12 +177,12 @@ while fichas > 0:
 
             print("")
             print('Você ganhou, a soma dos seus dados foi {0}.'.format(soma_dados))
-            print('Você tem {0} fichas agora.'.format(fichas))
+            print('Você tem {0} fichas agora, porque sua aposta foi multiplicada por 7.'.format(fichas))
 
         else:
             print("")
             print('Você perdeu, a soma dos seus dados foi {0}.'.format(soma_dados))
-            print('Você tem {0} fichas agora.'.format(fichas))
+            print('Você tem {0} fichas agora, porque você perdeu sua aposta.'.format(fichas))
 
         print("")
         print('A rodada acabou.')
