@@ -216,3 +216,27 @@ while fichas > 0:
             print('Você ganhou, a soma dos seus dados foi 12. A quantia de fichas que você apostou multiplicou por 30.')
             print('Você tem {0} fichas agora.'.format(fichas))
 
+        else:
+            fichas += 0
+
+            print("")
+            print('Você perdeu, a soma dos seus dados foi {0}.'.format(soma_dados))
+            print('Você tem {0} fichas agora.'.format(fichas))
+
+        print("")
+        print('A rodada acabou.')
+        print("- Caso queira continuar apostando digite 'sim'.")
+        print("- Caso queira parar de apostar digite 'não'.")
+        ficar_ou_nao=input("Opção: ")
+        if ficar_ou_nao=="NÃO" or ficar_ou_nao=="NAO" or ficar_ou_nao=="Não" or ficar_ou_nao=="Nao" or ficar_ou_nao=="N" or ficar_ou_nao=="não" or ficar_ou_nao=="nao" or ficar_ou_nao=="n":
+            break
+        if ficar_ou_nao=="SIM" or ficar_ou_nao=="Sim" or ficar_ou_nao=="S" or ficar_ou_nao=="sim" or ficar_ou_nao=="s":
+            print()
+            
+         
+            
+            
+            
+            
+    
+
