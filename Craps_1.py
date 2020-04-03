@@ -279,6 +279,16 @@ else:
 
 print("")
 print("")        
-print("")       
+print("")  
+
+
+print("")
+print("----------------------")
+print("OBRIGADO POR JOGAR")       
+print("Feito por:") 
+print("- Maria Eduarda Torres")
+print("- Andressa")
+print("----------------------")
+print("")
     
 
