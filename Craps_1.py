@@ -261,7 +261,14 @@ print("")
 print("")        
 print("")          
          
-            
+if fichas > 0:          
+    print("")
+    print("--------------------------------------------")
+    print("PARABÉNS!!!")
+    print("Você finalizou o jogo com {0} fichas.".format(fichas))
+    print("--------------------------------------------")
+    print("")
+
             
             
             
