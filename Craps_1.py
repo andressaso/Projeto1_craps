@@ -157,3 +157,22 @@ while fichas > 0:
         if ficar_ou_nao=="SIM" or ficar_ou_nao=="Sim" or ficar_ou_nao=="S" or ficar_ou_nao=="sim" or ficar_ou_nao=="s":
             print()
 
+#----------------------------------------------------------------------#
+# - Modo 'Any Craps':
+
+    if qual_aposta == 'Any Craps' or qual_aposta == 'Any craps' or qual_aposta == 'any craps' or qual_aposta == 'ANY CRAPS':
+        dado_um=random.randint(1,6)
+        dado_dois=random.randint(1,6)
+        soma_dados = (dado_um + dado_dois)
+
+        aposta=int(input('Quantas fichas você vai querer apostar? '))
+        while aposta > fichas:
+            print("Inválido")
+            aposta=int(input('Digite novamente: '))
+
+        fichas-=aposta
+
+        if soma_dados in [2,3,12]:
+            fichas+=aposta*7
+
+
