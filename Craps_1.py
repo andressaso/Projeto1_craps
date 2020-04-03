@@ -10,7 +10,7 @@ nome=input("Digite seu nome: ")
 fichas=1000
 
 print("")
-print("Bem vindo, {0} ao jogo Craps!".format(nome))
+print("Bem vindo ao jogo Craps, {0}!".format(nome))
 print("Boa sorte! ")
 
 #----------------------------------------------------------------------#
@@ -213,7 +213,7 @@ while fichas > 0:
             fichas += aposta*30
 
             print("")
-            print('Você ganhou, a soma dos seus dados foi 12. A quantia de fichas que você apostou multiplicou por 30.')
+            print('Você ganhou, a soma dos seus dados foi 12. A quantia de fichas que você apostou foi multiplicada por 30.')
             print('Você tem {0} fichas agora.'.format(fichas))
 
         else:
