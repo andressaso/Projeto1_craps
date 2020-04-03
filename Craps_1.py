@@ -232,7 +232,34 @@ while fichas > 0:
             break
         if ficar_ou_nao=="SIM" or ficar_ou_nao=="Sim" or ficar_ou_nao=="S" or ficar_ou_nao=="sim" or ficar_ou_nao=="s":
             print()
-            
+
+#----------------------------------------------------------------------#
+# - Finalização do Game:
+
+print("")        
+print("")        
+print("")
+print("")        
+print("")        
+print("")
+print("")        
+print("")        
+print("")
+print("")        
+print("")        
+print("")
+print("")        
+print("")        
+print("")
+print("")        
+print("")        
+print("")
+print("")        
+print("")        
+print("")
+print("")        
+print("")        
+print("")          
          
             
             
