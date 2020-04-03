@@ -11,7 +11,7 @@ fichas=1000
 
 print("")
 print("Bem vindo, {0} ao jogo Craps!".format(nome))
-print("Boa sorte! :)")
+print("Boa sorte! ")
 
 #----------------------------------------------------------------------#
 # - Loop Principal:
@@ -19,11 +19,11 @@ print("Boa sorte! :)")
 while fichas > 0:
     print("")
     print("------------------------------")
-    print("Você esta na fase inicial: Come Out")
+    print("Você está na fase inicial: Come Out")
     print("Você tem {0} fichas.".format(fichas))
     print("")
 
-    print('Escolha seu tipo de aposta:')
+    print('Escolha o seu tipo de aposta:')
     print('- Pass Line')
     print('- Field')
     print('- Any Craps')
@@ -40,7 +40,7 @@ while fichas > 0:
 
         aposta=int(input('Quantas fichas você vai querer apostar? '))
         while aposta > fichas:
-            print("Inválido, você está apostando mais do que tem.")
+            print("Inválido, você está apostando mais fichas do que tem.")
             aposta=int(input('Digite novamente: '))
 
         fichas-=aposta
@@ -144,7 +144,7 @@ while fichas > 0:
             fichas += aposta
 
             print("")
-            print("Você ganhou de volta as suas fichas que foram apostados, a soma dos seus dados foi {0}.".format(soma_dados))
+            print("Você ganhou de volta as suas fichas que foram apostadas, a soma dos seus dados foi {0}.".format(soma_dados))
             print('Você tem {0} fichas agora.'.format(fichas))
 
         print("")
@@ -177,12 +177,12 @@ while fichas > 0:
 
             print("")
             print('Você ganhou, a soma dos seus dados foi {0}.'.format(soma_dados))
-            print('Você tem {0} fichas agora, porque sua aposta foi multiplicada por 7.'.format(fichas))
+            print('Você tem {0} fichas agora.'.format(fichas))
 
         else:
             print("")
             print('Você perdeu, a soma dos seus dados foi {0}.'.format(soma_dados))
-            print('Você tem {0} fichas agora, porque você perdeu sua aposta.'.format(fichas))
+            print('Você tem {0} fichas agora.'.format(fichas))
 
         print("")
         print('A rodada acabou.')
